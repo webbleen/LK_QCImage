@@ -1,9 +1,9 @@
 //
 //  QCImageViewController.h
-//  Unity-iPhone
+//  QCImage
 //
-//  Created by linekong on 04/01/2017.
-//
+//  Created by wzh on 2017/9/26.
+//  Copyright © 2017年 李文斌. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

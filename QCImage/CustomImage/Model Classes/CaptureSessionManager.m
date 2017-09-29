@@ -30,7 +30,7 @@
     [[self previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     if ([_previewLayer respondsToSelector:@selector(connection)]) {
         if ([_previewLayer.connection isVideoOrientationSupported]) {
-            [_previewLayer.connection setVideoOrientation:[self getVideoOrientation]];
+            [_previewLayer.connection setVideoOrientation:[self avOrientationForDeviceOrientation]];
         }
     }
 }
@@ -140,16 +140,28 @@
 
 #pragma mark - Helper Method(s)
 
-- (AVCaptureVideoOrientation)getVideoOrientation
+//获取设备方向
+-(AVCaptureVideoOrientation)avOrientationForDeviceOrientation
 {
-    UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
-    
-    AVCaptureVideoOrientation orientation = AVCaptureVideoOrientationLandscapeRight;
-    if (deviceOrientation == UIDeviceOrientationLandscapeRight)
-    {
-        orientation = AVCaptureVideoOrientationLandscapeLeft;
+    AVCaptureVideoOrientation newOrientation;
+    switch ([[UIDevice currentDevice] orientation]) {
+        case UIDeviceOrientationPortrait:
+            newOrientation = AVCaptureVideoOrientationLandscapeRight;
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            newOrientation = AVCaptureVideoOrientationLandscapeLeft;
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            newOrientation = AVCaptureVideoOrientationLandscapeRight;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            newOrientation = AVCaptureVideoOrientationLandscapeLeft;
+            break;
+        default:
+            newOrientation = AVCaptureVideoOrientationLandscapeRight;
     }
-    return orientation;
+    
+    return newOrientation;
 }
 
 - (void)deviceOrientationDidChange
@@ -158,8 +170,8 @@
         if ([_previewLayer.connection isVideoOrientationSupported]) {
             
             UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
-            
-            /*if (deviceOrientation == UIDeviceOrientationPortrait)
+            /*
+            if (deviceOrientation == UIDeviceOrientationPortrait)
             {
                 [_previewLayer.connection setVideoOrientation:AVCaptureVideoOrientationLandscapeRight];
             }
@@ -167,7 +179,7 @@
             {
                 [_previewLayer.connection setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];
             }
-            else */if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
+            else*/ if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
             {
                 [_previewLayer.connection setVideoOrientation:AVCaptureVideoOrientationLandscapeRight];
             }
@@ -196,7 +208,7 @@
             newOrientation = AVCaptureVideoOrientationLandscapeLeft;
             break;
         default:
-            newOrientation = AVCaptureVideoOrientationPortrait;
+            newOrientation = AVCaptureVideoOrientationLandscapeRight;
     }
     [videoConnection setVideoOrientation: newOrientation];
 }

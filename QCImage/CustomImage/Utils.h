@@ -1,6 +1,6 @@
 //
 //  Utils.h
-//  CustomPhoto
+//  QCImage
 //
 //  Created by zhao jun on 15/11/10.
 //  Copyright © 2015年 李文斌. All rights reserved.

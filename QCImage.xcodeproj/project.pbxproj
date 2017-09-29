@@ -21,18 +21,12 @@
 		154549CF1F7CE7DA00354BAF /* CameraStyleKitClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 154549961F7CE7DA00354BAF /* CameraStyleKitClass.m */; };
 		154549D01F7CE7DA00354BAF /* backPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549981F7CE7DA00354BAF /* backPhoto@2x.png */; };
 		154549D11F7CE7DA00354BAF /* backPhoto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549991F7CE7DA00354BAF /* backPhoto@3x.png */; };
-		154549D21F7CE7DA00354BAF /* cameraPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499A1F7CE7DA00354BAF /* cameraPhoto@2x.png */; };
-		154549D31F7CE7DA00354BAF /* cameraPhoto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499B1F7CE7DA00354BAF /* cameraPhoto@3x.png */; };
 		154549D41F7CE7DA00354BAF /* cancleCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499C1F7CE7DA00354BAF /* cancleCamera@2x.png */; };
 		154549D51F7CE7DA00354BAF /* cancleCamera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499D1F7CE7DA00354BAF /* cancleCamera@3x.png */; };
 		154549D61F7CE7DA00354BAF /* canclePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499E1F7CE7DA00354BAF /* canclePhoto@2x.png */; };
 		154549D71F7CE7DA00354BAF /* canclePhoto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1545499F1F7CE7DA00354BAF /* canclePhoto@3x.png */; };
 		154549D81F7CE7DA00354BAF /* clipPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A01F7CE7DA00354BAF /* clipPhoto@2x.png */; };
 		154549D91F7CE7DA00354BAF /* clipPhoto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A11F7CE7DA00354BAF /* clipPhoto@3x.png */; };
-		154549DA1F7CE7DA00354BAF /* closeFlish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A21F7CE7DA00354BAF /* closeFlish@2x.png */; };
-		154549DB1F7CE7DA00354BAF /* closeFlish@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A31F7CE7DA00354BAF /* closeFlish@3x.png */; };
-		154549DC1F7CE7DA00354BAF /* openFlish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A41F7CE7DA00354BAF /* openFlish@2x.png */; };
-		154549DD1F7CE7DA00354BAF /* openFlish@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A51F7CE7DA00354BAF /* openFlish@3x.png */; };
 		154549DE1F7CE7DA00354BAF /* sureCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A61F7CE7DA00354BAF /* sureCamera@2x.png */; };
 		154549DF1F7CE7DA00354BAF /* sureCamera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A71F7CE7DA00354BAF /* sureCamera@3x.png */; };
 		154549E01F7CE7DA00354BAF /* surePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154549A81F7CE7DA00354BAF /* surePhoto@2x.png */; };
@@ -84,18 +78,12 @@
 		154549961F7CE7DA00354BAF /* CameraStyleKitClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStyleKitClass.m; sourceTree = "<group>"; };
 		154549981F7CE7DA00354BAF /* backPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backPhoto@2x.png"; sourceTree = "<group>"; };
 		154549991F7CE7DA00354BAF /* backPhoto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backPhoto@3x.png"; sourceTree = "<group>"; };
-		1545499A1F7CE7DA00354BAF /* cameraPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraPhoto@2x.png"; sourceTree = "<group>"; };
-		1545499B1F7CE7DA00354BAF /* cameraPhoto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraPhoto@3x.png"; sourceTree = "<group>"; };
 		1545499C1F7CE7DA00354BAF /* cancleCamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancleCamera@2x.png"; sourceTree = "<group>"; };
 		1545499D1F7CE7DA00354BAF /* cancleCamera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancleCamera@3x.png"; sourceTree = "<group>"; };
 		1545499E1F7CE7DA00354BAF /* canclePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canclePhoto@2x.png"; sourceTree = "<group>"; };
 		1545499F1F7CE7DA00354BAF /* canclePhoto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canclePhoto@3x.png"; sourceTree = "<group>"; };
 		154549A01F7CE7DA00354BAF /* clipPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipPhoto@2x.png"; sourceTree = "<group>"; };
 		154549A11F7CE7DA00354BAF /* clipPhoto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipPhoto@3x.png"; sourceTree = "<group>"; };
-		154549A21F7CE7DA00354BAF /* closeFlish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeFlish@2x.png"; sourceTree = "<group>"; };
-		154549A31F7CE7DA00354BAF /* closeFlish@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeFlish@3x.png"; sourceTree = "<group>"; };
-		154549A41F7CE7DA00354BAF /* openFlish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openFlish@2x.png"; sourceTree = "<group>"; };
-		154549A51F7CE7DA00354BAF /* openFlish@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openFlish@3x.png"; sourceTree = "<group>"; };
 		154549A61F7CE7DA00354BAF /* sureCamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sureCamera@2x.png"; sourceTree = "<group>"; };
 		154549A71F7CE7DA00354BAF /* sureCamera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sureCamera@3x.png"; sourceTree = "<group>"; };
 		154549A81F7CE7DA00354BAF /* surePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "surePhoto@2x.png"; sourceTree = "<group>"; };
@@ -239,18 +227,12 @@
 			children = (
 				154549981F7CE7DA00354BAF /* backPhoto@2x.png */,
 				154549991F7CE7DA00354BAF /* backPhoto@3x.png */,
-				1545499A1F7CE7DA00354BAF /* cameraPhoto@2x.png */,
-				1545499B1F7CE7DA00354BAF /* cameraPhoto@3x.png */,
 				1545499C1F7CE7DA00354BAF /* cancleCamera@2x.png */,
 				1545499D1F7CE7DA00354BAF /* cancleCamera@3x.png */,
 				1545499E1F7CE7DA00354BAF /* canclePhoto@2x.png */,
 				1545499F1F7CE7DA00354BAF /* canclePhoto@3x.png */,
 				154549A01F7CE7DA00354BAF /* clipPhoto@2x.png */,
 				154549A11F7CE7DA00354BAF /* clipPhoto@3x.png */,
-				154549A21F7CE7DA00354BAF /* closeFlish@2x.png */,
-				154549A31F7CE7DA00354BAF /* closeFlish@3x.png */,
-				154549A41F7CE7DA00354BAF /* openFlish@2x.png */,
-				154549A51F7CE7DA00354BAF /* openFlish@3x.png */,
 				154549A61F7CE7DA00354BAF /* sureCamera@2x.png */,
 				154549A71F7CE7DA00354BAF /* sureCamera@3x.png */,
 				154549A81F7CE7DA00354BAF /* surePhoto@2x.png */,
@@ -432,23 +414,17 @@
 			files = (
 				154549D11F7CE7DA00354BAF /* backPhoto@3x.png in Resources */,
 				154549D01F7CE7DA00354BAF /* backPhoto@2x.png in Resources */,
-				154549D31F7CE7DA00354BAF /* cameraPhoto@3x.png in Resources */,
 				154549D91F7CE7DA00354BAF /* clipPhoto@3x.png in Resources */,
 				154549E21F7CE7DA00354BAF /* takePhoto@2x.png in Resources */,
 				154549E31F7CE7DA00354BAF /* takePhoto@3x.png in Resources */,
-				154549DD1F7CE7DA00354BAF /* openFlish@3x.png in Resources */,
-				154549DB1F7CE7DA00354BAF /* closeFlish@3x.png in Resources */,
 				154549DE1F7CE7DA00354BAF /* sureCamera@2x.png in Resources */,
-				154549DC1F7CE7DA00354BAF /* openFlish@2x.png in Resources */,
 				154549D61F7CE7DA00354BAF /* canclePhoto@2x.png in Resources */,
-				154549D21F7CE7DA00354BAF /* cameraPhoto@2x.png in Resources */,
 				F3B4E55B1F7900680076E711 /* LaunchScreen.storyboard in Resources */,
 				154549EB1F7CE7DA00354BAF /* upload.cfg in Resources */,
 				154549D41F7CE7DA00354BAF /* cancleCamera@2x.png in Resources */,
 				154549E11F7CE7DA00354BAF /* surePhoto@3x.png in Resources */,
 				154549D81F7CE7DA00354BAF /* clipPhoto@2x.png in Resources */,
 				F3B4E5581F7900680076E711 /* Assets.xcassets in Resources */,
-				154549DA1F7CE7DA00354BAF /* closeFlish@2x.png in Resources */,
 				154549D71F7CE7DA00354BAF /* canclePhoto@3x.png in Resources */,
 				154549CE1F7CE7DA00354BAF /* PaintCodeFile.pcvd in Resources */,
 				154549CD1F7CE7DA00354BAF /* Cool Camera Mockup.sketch in Resources */,

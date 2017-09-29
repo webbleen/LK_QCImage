@@ -117,14 +117,14 @@
     if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
     {
         //Declare the sizing of the UI elements for iPad
-        sideBarSize = CGSizeMake(self.frame.size.width*0.2, self.frame.size.height);
+        sideBarSize = CGSizeMake(self.frame.size.width*0.1, self.frame.size.height);
         itemButtonSize = CGSizeMake(self.bounds.size.height * 0.1, self.bounds.size.height * 0.1);
         barButtonItemSize = CGSizeMake(self.frame.size.height * 0.1, self.frame.size.height * 0.1);
     } else
     {
         //Declare the sizing of the UI elements for iPhone
         sideBarSize = CGSizeMake(self.frame.size.width*0.15, self.frame.size.height);
-        itemButtonSize = CGSizeMake(self.bounds.size.height * 0.21, self.bounds.size.height * 0.21);
+        itemButtonSize = CGSizeMake(self.frame.size.height * 0.21, self.frame.size.height * 0.21);
         barButtonItemSize = CGSizeMake(self.frame.size.height * 0.1, self.frame.size.height * 0.1);
     }
     
@@ -373,7 +373,10 @@
             completionHandler();
         }
     }
-    else { completionHandler(); }
+    else
+    {
+        completionHandler();
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -383,7 +386,7 @@
 
 -(BOOL)shouldAutorotate
 {
-    return NO;
+    return YES;
 }
 
 -(NSUInteger)supportedInterfaceOrientations

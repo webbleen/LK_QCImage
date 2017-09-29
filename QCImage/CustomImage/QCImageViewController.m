@@ -1,9 +1,9 @@
 //
-//  QCImageViewController.m
-//  Unity-iPhone
+//  QCImageViewController.h
+//  QCImage
 //
-//  Created by linekong on 04/01/2017.
-//
+//  Created by wzh on 2017/9/26.
+//  Copyright © 2017年 李文斌. All rights reserved.
 //
 
 #import "QCImageViewController.h"
@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) CameraSessionView *cameraView;
 @property (nonatomic, strong) UIImagePickerController *imgPicker;
+@property (nonatomic, assign) BOOL isTakePhoto;
 @property (nonatomic)BOOL canCa;
 
 @end
@@ -37,10 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _canCa = [self canUserCamera];
-    if (_canCa) {
-        [self createQCImage];
-    }
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.frame = CGRectMake(0, 0, QC_SCREEN_SIZE.height, QC_SCREEN_SIZE.width);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,31 +57,10 @@
 }
 */
 
-#pragma mark - 检查相机权限
-- (BOOL)canUserCamera{
-    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if (authStatus == AVAuthorizationStatusDenied) {
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"请打开相机权限" message:@"设置-隐私-相机" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
-        alertView.tag = 100;
-        [alertView show];
-        return NO;
-    }
-    else{
-        return YES;
-    }
-    return YES;
-}
-
-- (void)createQCImage
-{
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.frame = CGRectMake(0, 0, QC_SCREEN_SIZE.height, QC_SCREEN_SIZE.width);
-}
-
 - (void)useCameraWithDelegate:(id<QCImageDelegate>)delegate
 {
-    self.view.frame = CGRectMake(0, 0, QC_SCREEN_SIZE.height, QC_SCREEN_SIZE.width);
     self.delegate = delegate;
+    self.isTakePhoto = YES;
     
     //Set white status bar
     [self setNeedsStatusBarAppearanceUpdate];
@@ -106,11 +84,11 @@
 
 - (void)usePhotoWithDelegate:(id<QCImageDelegate>)delegate
 {
-    self.view.frame = CGRectMake(0, 0, QC_SCREEN_SIZE.height, QC_SCREEN_SIZE.width);
     self.delegate = delegate;
+    self.isTakePhoto = NO;
     
     // 打开相册
-    [self openImagePickerControllerWithType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [self openImagePickerControllerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
 - (void)openImagePickerControllerWithType:(UIImagePickerControllerSourceType)type
@@ -131,7 +109,6 @@
     [[_imgPicker.view layer]addAnimation:applicationLoadViewIn forKey:kCATransitionReveal];
     
     if ([self appRootViewController].presentedViewController == nil) {
-//        [[self appRootViewController] presentViewController:_imgPicker animated:NO completion:nil];
         [[self appRootViewController].view addSubview:_imgPicker.view];
     }
 }
@@ -173,6 +150,11 @@
     
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self removeSubView];
+}
+
 - (void)cropImage: (UIImage *)image
 {
     ClipViewController *viewController = [[ClipViewController alloc] init];
@@ -190,8 +172,7 @@
 #pragma mark -- ClipPhotoDelegate
 - (void)clipPhoto:(UIImage *)image
 {
-    [self.cameraView removeFromSuperview];
-    [self.imgPicker.view removeFromSuperview];
+    [self removeSubView];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectImageWithData:)])
     {
@@ -199,7 +180,7 @@
     }
 }
 
-//拍照之后调到相片详情页面
+//拍照之后调到相片裁剪页面
 -(void)jumpImageView:(NSData*)data{
     ClipViewController *viewController = [[ClipViewController alloc] init];
     UIImage *image = [UIImage imageWithData:data];
@@ -211,6 +192,18 @@
     
     if ([self appRootViewController].presentedViewController == nil) {
         [[self appRootViewController] presentViewController:viewController animated:NO completion:nil];
+    }
+}
+
+- (void)removeSubView
+{
+    if (_isTakePhoto == YES)
+    {
+        [self.cameraView removeFromSuperview];
+    }
+    else
+    {
+        [self.imgPicker.view removeFromSuperview];
     }
 }
 

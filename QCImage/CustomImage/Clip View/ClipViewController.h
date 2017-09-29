@@ -1,9 +1,9 @@
 //
 //  ClipViewController.h
-//  Camera
+//  QCImage
 //
-//  Created by wzh on 2017/6/6.
-//  Copyright © 2017年 wzh. All rights reserved.
+//  Created by wzh on 2017/9/26.
+//  Copyright © 2017年 李文斌. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,9 @@
 //
 //  ClipViewController.m
-//  Camera
+//  QCImage
 //
-//  Created by wzh on 2017/6/6.
-//  Copyright © 2017年 wzh. All rights reserved.
+//  Created by wzh on 2017/9/26.
+//  Copyright © 2017年 李文斌. All rights reserved.
 //
 
 #import "ClipViewController.h"
@@ -85,7 +85,7 @@
     if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
     {
         //Declare the sizing of the UI elements for iPad
-        sideBarSize = CGSizeMake(self.view.frame.size.width*0.2, self.view.frame.size.height);
+        sideBarSize = CGSizeMake(self.view.frame.size.width*0.1, self.view.frame.size.height);
         itemButtonSize = CGSizeMake(self.view.frame.size.height * 0.1, self.view.frame.size.height * 0.1);
     } else
     {
